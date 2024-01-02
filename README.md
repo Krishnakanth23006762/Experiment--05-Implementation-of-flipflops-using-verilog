@@ -116,97 +116,57 @@ Q(t+1)=T′Q(t)+TQ(t)′
 ## SR FLIPFLOP 
 ```
 module sr(S,R,clk,Q,Qbar);
-
 input S,R,clk;
-
 output reg Q;
-
 output reg Qbar;
-
 initial Q=0;
-
 initial Qbar=1;
-
 always @(posedge clk)
-
 begin
-
 Q=S|((~R)&Q);
-
 Qbar=R|((~S)&(Qbar));
-
 end
-
 endmodule
 ```
 ## JK Flipflop
 ```
 module jk(J,K,clk,Q,Qbar);
-
 input J,K,clk;
-
 output reg Q;
-
 output reg Qbar;
-
 initial Q=0;
-
 initial Qbar=1;
-
 always @(posedge clk)
-
 begin
-
 Q=(J&(~Q))|((~K)&Q);
-
 Qbar=((~J)&(Qbar))|K&(~Qbar);
-
 end
-
 endmodule
 ```
 ## D Flipflop
 ```
-module d(d,clk,q,qbar);
-
+Module d(d,clk,q,qbar);
 input d,clk;
-
 output q,qbar;
-
 reg q,qbar;
-
 always @(posedge clk)
-
 begin
-
 q=d;
-
 qbar=~q;
-
 end
-
 endmodule
 ```
 ## T Flipflop
 ```
 module t(clk,T,q,qbar);
-
 input clk,T;
-
 output q,qbar;
-
 reg q,qbar;
-
 always @(posedge clk)
-
 begin
-
 q=(T&~q)|(~T&q);
-
 qbar=~q;
-
 end
-
 endmodule
 ```
 
