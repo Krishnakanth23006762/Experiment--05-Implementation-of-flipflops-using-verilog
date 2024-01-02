@@ -113,7 +113,7 @@ Q(t+1)=T′Q(t)+TQ(t)′
 
 
 ### PROGRAM 
-## SR FLIPFLOP 
+## SR FLIP-FLOP 
 ```
 module sr(S,R,clk,Q,Qbar);
 input S,R,clk;
@@ -128,7 +128,7 @@ Qbar=R|((~S)&(Qbar));
 end
 endmodule
 ```
-## JK Flipflop
+## JK Flip-flop
 ```
 module jk(J,K,clk,Q,Qbar);
 input J,K,clk;
@@ -143,7 +143,7 @@ Qbar=((~J)&(Qbar))|K&(~Qbar);
 end
 endmodule
 ```
-## D Flipflop
+## D Flip-flop
 ```
 Module d(d,clk,q,qbar);
 input d,clk;
@@ -156,7 +156,7 @@ qbar=~q;
 end
 endmodule
 ```
-## T Flipflop
+## T Flip-flop
 ```
 module t(clk,T,q,qbar);
 input clk,T;
@@ -182,20 +182,6 @@ endmodule
 
 ## T Flipflop
 ![image](https://github.com/Krishnakanth23006762/Experiment--05-Implementation-of-flipflops-using-verilog/assets/138849446/81819c3c-7878-4444-bff2-3341012a7826)
-
-
-### TRUTH TABLE
-## SR FLIPFLOP
-![image](https://github.com/Krishnakanth23006762/Experiment--05-Implementation-of-flipflops-using-verilog/assets/138849446/25478125-7b39-4604-a941-27d3d29a7060)
-
-## JK Flipflop
-![image](https://github.com/Krishnakanth23006762/Experiment--05-Implementation-of-flipflops-using-verilog/assets/138849446/3a104ec4-e988-4225-bc52-a1cd25569b0f)
-
-## D Flipflop
-![image](https://github.com/Krishnakanth23006762/Experiment--05-Implementation-of-flipflops-using-verilog/assets/138849446/7dabd5e6-b6ec-4fbf-b5bd-c478926a4d12)
-
-## T Flipflop
-![image](https://github.com/Krishnakanth23006762/Experiment--05-Implementation-of-flipflops-using-verilog/assets/138849446/ac06fe0f-969f-4141-92ba-37ead1e64140)
 
 
 ### TIMING DIGRAMS FOR FLIP FLOPS 
